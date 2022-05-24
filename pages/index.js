@@ -1,6 +1,3 @@
-// import Head from 'next/head'
-// import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import clientPromise from "../lib/mongodb";
 import EnterPage from './Components/EnterPage';
 import About from './Components/About';
@@ -8,9 +5,8 @@ import Projects from './Components/Projects';
 import Form from './Components/Form';
 
 export default function Home({ projects }) {
-  // console.log(projects)
   return (
-    <div className={styles.container}>
+    <div className="mainPage">
       <EnterPage />
       <About />
       {projects.map(project => {

@@ -1,0 +1,31 @@
+.about {
+    h2 {
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: row wrap;
+        width: clamp(250px, 80%, 3000px);
+        margin: 2% auto;
+        align-items: center;
+
+        &--infoText,
+        &--skills {
+            background-color: aquamarine;
+            width: clamp(300px, 48%, 1500px);
+            margin: 0% auto;
+        }
+
+        &--infoText {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(15px, 1.1vw, 40px);
+            padding: 1% 0%;
+        }
+
+        &--skills {
+            font-size: clamp(20px, 1.3vw, 40px);
+            list-style-type: none;
+        }
+    }
+}
