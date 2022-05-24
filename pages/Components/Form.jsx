@@ -11,7 +11,7 @@ const Form = () => {
 
     console.log(email, name, message);
 
-    const res = await fetch("http://localhost:3000/api/hello", {
+    const res = await fetch("/api/hello", {
       method: "POST",
       body: JSON.stringify({
         email,
