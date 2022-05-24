@@ -7,9 +7,9 @@ const Form = () => {
     evt.preventDefault();
     let email = evt.target.elements.email.value;
     let name = evt.target.elements.name.value;
-    let messageFromUser = evt.target.elements.message.value;
+    let message = evt.target.elements.message.value;
 
-    console.log(email, name, messageFromUser);
+    console.log(email, name, message);
 
     const res = await fetch("http://localhost:3000/api/hello", {
       method: "POST",
@@ -21,10 +21,10 @@ const Form = () => {
     });
 
     const data = await res.json();
-    const { message, error } = data;
-    console.log(message);
+    const { messageFromServer, error } = data;
+    console.log(messageFromServer);
     console.log(error);
-    setMessage(message);
+    setMessage(messageFromServer);
   }
 
   useEffect(() => {

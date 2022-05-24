@@ -8,12 +8,12 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       console.log(req.body)
-      let bodyObject = JSON.parse(req.body);
-      let newPost = await db.collection("contacts").insertOne(bodyObject);
+      const bodyObject = JSON.parse(req.body);
+      const newPost = await db.collection("contacts").insertOne(bodyObject);
       console.log(newPost)
-      res.json({ message: "We get your message" })
+      res.json({ messageFromServer: "We get your message" })
     } catch (error) {
-      res.json({ error, message: 'There some problem on server' })
+      res.json({ error, messageFromServer: 'There some problem on server' })
     }
   }
 }
