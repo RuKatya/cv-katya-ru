@@ -10,8 +10,5 @@ export default async function handler(req, res) {
     let bodyObject = JSON.parse(req.body);
     let newPost = await db.collection("contacts").insertOne(bodyObject);
     console.log(newPost)
-    // res.json(newPost.ops[0]);
-    // res.json({ hi: 'hi' })
   }
-  // res.status(200).json({ name: 'John Doe' })
 }

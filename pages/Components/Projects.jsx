@@ -1,9 +1,14 @@
-const Projects = ({ project, key }) => {
-  // console.log(project);
+const Projects = ({ project }) => {
   return (
-    <div key={key}>
-      <h2>{project.title}</h2>
-    </div>
+    <>
+      {project ? (
+        <div key={project._id}>
+          <h2>{project.title}</h2>
+        </div>
+      ) : (
+        <div>Loading</div>
+      )}
+    </>
   );
 };
 
