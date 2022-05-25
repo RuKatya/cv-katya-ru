@@ -6,7 +6,7 @@ const NavBar = () => {
   const hasWindow = typeof window !== "undefined";
 
   function getWindowScroll() {
-    const heightScroll = hasWindow ? window.scrollY : 2000;
+    const heightScroll = hasWindow ? window.scrollY : 0;
     return heightScroll;
   }
 
