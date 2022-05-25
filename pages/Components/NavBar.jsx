@@ -2,41 +2,41 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const NavBar = () => {
-  const hasWindow = typeof window !== "undefined";
+const NavBar = ({ scrollArea, windowArea }) => {
+  // const hasWindow = typeof window !== "undefined";
 
-  function getWindowScroll() {
-    const heightScroll = hasWindow ? window.scrollY : 0;
-    return heightScroll;
-  }
+  // function getWindowScroll() {
+  //   const heightScroll = hasWindow ? window.scrollY : 0;
+  //   return heightScroll;
+  // }
 
-  function getWindowWidth() {
-    const width = hasWindow ? window.innerWidth : 1920;
-    return width;
-  }
+  // function getWindowWidth() {
+  //   const width = hasWindow ? window.innerWidth : 1920;
+  //   return width;
+  // }
 
-  const [scrollArea, setScrollArea] = useState(getWindowScroll());
-  const [windowArea, setWindowArea] = useState(getWindowWidth());
+  // const [scrollArea, setScrollArea] = useState(getWindowScroll());
+  // const [windowArea, setWindowArea] = useState(getWindowWidth());
   const [toggleMenu, setToggleMenu] = useState(false);
 
-  console.log(scrollArea);
-  console.log(windowArea);
+  // console.log(scrollArea);
+  // console.log(windowArea);
 
-  useEffect(() => {
-    const setScrollHeight = () => {
-      setScrollArea(window.scrollY);
-    };
+  // useEffect(() => {
+  //   const setScrollHeight = () => {
+  //     setScrollArea(window.scrollY);
+  //   };
 
-    window.addEventListener("scroll", setScrollHeight);
-  }, [hasWindow]);
+  //   window.addEventListener("scroll", setScrollHeight);
+  // }, [hasWindow]);
 
-  useEffect(() => {
-    const setWindowWidth = () => {
-      setWindowArea(window.innerWidth);
-    };
+  // useEffect(() => {
+  //   const setWindowWidth = () => {
+  //     setWindowArea(window.innerWidth);
+  //   };
 
-    window.addEventListener("resize", setWindowWidth);
-  }, [hasWindow]);
+  //   window.addEventListener("resize", setWindowWidth);
+  // }, [hasWindow]);
 
   const toggleNav = (e) => {
     setToggleMenu(!toggleMenu);

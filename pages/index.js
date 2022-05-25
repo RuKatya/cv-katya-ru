@@ -5,6 +5,8 @@ import Projects from './Components/Project';
 import Form from './Components/Form';
 
 export default function Home({ projects }) {
+
+
   return (
     <div className="mainPage">
       <EnterPage />

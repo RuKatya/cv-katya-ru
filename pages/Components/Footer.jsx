@@ -4,7 +4,7 @@ import { AccessAlarm, ThreeDRotation } from "@mui/icons-material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 
-const Footer = () => {
+const Footer = ({ scrollArea, windowArea }) => {
   return (
     <footer className="footerBar">
       <Link to="enterLayer" smooth={true} className="footerBar__upBtn">
@@ -13,7 +13,7 @@ const Footer = () => {
       <Contacts />
       <div className="footerBar__copyright">
         <p className="footerBar__copyright--symbol">
-          <CopyrightIcon sx={{ fontSize: 15 }} />
+          <CopyrightIcon sx={{ fontSize: windowArea > 700 ? 15 : 20 }} />
         </p>
         <p className="footerBar__copyright--name">Katya Rukosuev 2022</p>
       </div>
