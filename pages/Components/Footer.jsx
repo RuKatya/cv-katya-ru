@@ -8,9 +8,9 @@ const Footer = ({ windowArea }) => {
   return (
     <footer className="footerBar">
       <Link to="enterLayer" smooth={true} className="footerBar__upBtn">
-        <a>
-          <KeyboardArrowUpIcon fontSize="large" />
-        </a>
+        {/* <a> */}
+        <KeyboardArrowUpIcon fontSize="large" />
+        {/* </a> */}
       </Link>
       <Contacts windowArea={windowArea} />
       <div className="footerBar__copyright">

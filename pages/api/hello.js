@@ -34,13 +34,6 @@ export default async function handler(req, res) {
         }).catch(err => {
           res.json({ message: err.errors })
         })
-
-      // res.json({ ok: true })
-
-
-      // const newPost = await db.collection("contacts").insertOne(bodyObject);
-      // console.log(newPost)
-      // res.json({ messageFromServer: "We got your message" })
     } catch (error) {
       res.json({ error, messageFromServer: 'There some problem on server' })
     }

@@ -11,7 +11,7 @@ const EnterPage = () => {
       </div>
       <div className="enterLayer__showProjects">
         <Link to="projects" smooth={true}>
-          <a>View my work</a>
+          View my work
         </Link>
         <span>
           <NavigateNextIcon

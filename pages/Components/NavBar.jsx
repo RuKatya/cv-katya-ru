@@ -35,16 +35,16 @@ const NavBar = ({ scrollArea, windowArea }) => {
       {(toggleMenu || windowArea > 700) && (
         <div className="navBar__links">
           <Link to="enterLayer" smooth={true} onClick={toggleNav}>
-            <a>Home</a>
+            Home
           </Link>
           <Link to="about" smooth={true} onClick={toggleNav}>
-            <a>About</a>
+            About
           </Link>
           <Link to="projects" smooth={true} onClick={toggleNav}>
-            <a>Projects</a>
+            Projects
           </Link>
           <Link to="contact" smooth={true} onClick={toggleNav}>
-            <a>Contact</a>
+            Contact
           </Link>
           <Link to="" target="_blank"></Link>
         </div>
