@@ -11,7 +11,7 @@ const NavBar = () => {
   }
 
   function getWindowWidth() {
-    const width = hasWindow ? window.innerWidth : 2000;
+    const width = hasWindow ? window.innerWidth : 1920;
     return width;
   }
 

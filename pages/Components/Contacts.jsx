@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 const Contacts = () => {
   return (
-    <div>
+    <div className="footerBar__contactLinks">
       <Link href="https://www.linkedin.com/in/katya-rukosuev/" target="_blank">
         <a target="_blank">Link</a>
       </Link>
