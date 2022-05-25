@@ -12,13 +12,13 @@
         top: -3.5vh;
         background-color: rgb(1, 48, 88);
         text-align: center;
-        padding: 0.5%;
+        padding: 0.5% 0.5% 0% 0.5%;
         display: flex;
         justify-content: center;
         align-items: center;
 
         @media (max-width:700px) {
-            padding: 2%;
+            padding: 2% 2% 0% 2%;
         }
     }
 
