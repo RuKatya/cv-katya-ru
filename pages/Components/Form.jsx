@@ -25,6 +25,8 @@ const Form = () => {
     console.log(messageFromServer);
     console.log(error);
     setMessage(messageFromServer);
+
+    evt.target.reset();
   }
 
   useEffect(() => {
