@@ -1,14 +1,14 @@
 import { Link, animateScroll as scroll } from "react-scroll";
+import Contacts from "./Contacts";
 
 const Footer = () => {
   return (
-    <>
-      <footer>
-        <Link to="enterLayer" smooth={true}>
-          UP
-        </Link>
-      </footer>
-    </>
+    <footer className="footerBar">
+      <Link to="enterLayer" smooth={true}>
+        UP
+      </Link>
+      <Contacts />
+    </footer>
   );
 };
 

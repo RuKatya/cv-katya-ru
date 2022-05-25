@@ -3,11 +3,12 @@
 
 @import './mixin/mixin';
 @import './var/var';
+@import './components/navBar';
 @import './components/enterPage';
 @import './components/about';
 @import './components/projects';
 @import './components/userForm';
-@import './components/navBar';
+@import './components/footer';
 
 * {
   box-sizing: border-box;

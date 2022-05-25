@@ -6,12 +6,12 @@ const NavBar = () => {
   const hasWindow = typeof window !== "undefined";
 
   function getWindowScroll() {
-    const heightScroll = hasWindow ? window.scrollY : null;
+    const heightScroll = hasWindow ? window.scrollY : 2000;
     return heightScroll;
   }
 
   function getWindowWidth() {
-    const width = hasWindow ? window.innerWidth : null;
+    const width = hasWindow ? window.innerWidth : 2000;
     return width;
   }
 
@@ -66,16 +66,16 @@ const NavBar = () => {
       </button>
       {(toggleMenu || windowArea > 700) && (
         <>
-          <Link to="enterLayer" smooth={true}>
+          <Link to="enterLayer" smooth={true} onClick={toggleNav}>
             Home
           </Link>
-          <Link to="about" smooth={true}>
+          <Link to="about" smooth={true} onClick={toggleNav}>
             About
           </Link>
-          <Link to="projects" smooth={true}>
+          <Link to="projects" smooth={true} onClick={toggleNav}>
             Projects
           </Link>
-          <Link to="contact" smooth={true}>
+          <Link to="contact" smooth={true} onClick={toggleNav}>
             Contact
           </Link>
         </>
