@@ -38,13 +38,7 @@
         a {
             background-color: rgba(20, 55, 67, 0.406);
             display: flex;
-
             padding: 2%;
-        }
-
-        svg {
-            // background-color: aquamarine;
-            // padding: 2%;
         }
     }
 
@@ -56,7 +50,6 @@
         &--name {
             margin: 0% 1%;
             width: clamp(160px, 7vw, 200px);
-            // width: 7vw;
         }
     }
 }

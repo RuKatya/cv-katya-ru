@@ -1,42 +1,9 @@
 import { Link, animateScroll as scroll } from "react-scroll";
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBar = ({ scrollArea, windowArea }) => {
-  // const hasWindow = typeof window !== "undefined";
-
-  // function getWindowScroll() {
-  //   const heightScroll = hasWindow ? window.scrollY : 0;
-  //   return heightScroll;
-  // }
-
-  // function getWindowWidth() {
-  //   const width = hasWindow ? window.innerWidth : 1920;
-  //   return width;
-  // }
-
-  // const [scrollArea, setScrollArea] = useState(getWindowScroll());
-  // const [windowArea, setWindowArea] = useState(getWindowWidth());
   const [toggleMenu, setToggleMenu] = useState(false);
-
-  // console.log(scrollArea);
-  // console.log(windowArea);
-
-  // useEffect(() => {
-  //   const setScrollHeight = () => {
-  //     setScrollArea(window.scrollY);
-  //   };
-
-  //   window.addEventListener("scroll", setScrollHeight);
-  // }, [hasWindow]);
-
-  // useEffect(() => {
-  //   const setWindowWidth = () => {
-  //     setWindowArea(window.innerWidth);
-  //   };
-
-  //   window.addEventListener("resize", setWindowWidth);
-  // }, [hasWindow]);
 
   const toggleNav = (e) => {
     setToggleMenu(!toggleMenu);
@@ -46,39 +13,47 @@ const NavBar = ({ scrollArea, windowArea }) => {
     <nav
       className="navBar"
       style={{
-        background: scrollArea > 750 ? "grey" : "black",
-        color: scrollArea > 750 ? "white" : "grey",
+        background: scrollArea > 750 ? "rgb(29, 29, 29)" : "black",
+        color: scrollArea > 750 ? "white" : "rgb(212, 212, 212)",
       }}
     >
       <button
         onClick={toggleNav}
         className="navBar__menuBtn"
         style={{
-          background: scrollArea > 750 ? "grey" : "black",
+          background: scrollArea > 750 ? "rgb(29, 29, 29)" : "black",
         }}
       >
-        <Image
-          src={scrollArea > 750 ? "/img/menu-white.png" : "/img/menu-grey.png"}
-          alt="menu"
-          width={windowArea < 350 ? 30 : 40}
-          height={windowArea < 350 ? 30 : 40}
+        <MenuIcon
+          sx={{
+            color: scrollArea > 750 ? "white" : "rgb(94, 93, 93)",
+            width: windowArea < 400 ? "40px" : "50px",
+            height: windowArea < 400 ? "40px" : "50px",
+          }}
         />
       </button>
       {(toggleMenu || windowArea > 700) && (
-        <>
+        <div
+          style={{
+            background:
+              toggleMenu && windowArea < 700 ? "rgb(29, 29, 29)" : "black",
+            transition: "0.5s ease",
+          }}
+          className="navBar__links"
+        >
           <Link to="enterLayer" smooth={true} onClick={toggleNav}>
-            Home
+            <a>Home</a>
           </Link>
           <Link to="about" smooth={true} onClick={toggleNav}>
-            About
+            <a>About</a>
           </Link>
           <Link to="projects" smooth={true} onClick={toggleNav}>
-            Projects
+            <a>Projects</a>
           </Link>
           <Link to="contact" smooth={true} onClick={toggleNav}>
-            Contact
+            <a>Contact</a>
           </Link>
-        </>
+        </div>
       )}
     </nav>
   );

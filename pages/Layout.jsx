@@ -17,7 +17,6 @@ export default function Layout({ children }) {
 
   const [scrollArea, setScrollArea] = useState(getWindowScroll());
   const [windowArea, setWindowArea] = useState(getWindowWidth());
-  // const [toggleMenu, setToggleMenu] = useState(false);
 
   useEffect(() => {
     const setScrollHeight = () => {

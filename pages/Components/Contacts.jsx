@@ -9,22 +9,22 @@ const Contacts = ({ windowArea }) => {
     <div className="footerBar__contactLinks">
       <Link href="https://www.linkedin.com/in/katya-rukosuev/" target="_blank">
         <a target="_blank">
-          <LinkedInIcon sx={{ fontSize: windowArea <= 700 ? 15 : 40 }} />
+          <LinkedInIcon sx={{ fontSize: windowArea <= 700 ? 30 : 40 }} />
         </a>
       </Link>
       <Link href="mailto:katya.ru.fullstack@gmail.com">
         <a>
-          <EmailIcon sx={{ fontSize: windowArea <= 700 ? 15 : 35 }} />
+          <EmailIcon sx={{ fontSize: windowArea <= 700 ? 30 : 35 }} />
         </a>
       </Link>
       <Link href="https://wa.me/972526299431">
         <a target="_blank">
-          <WhatsAppIcon sx={{ fontSize: windowArea <= 700 ? 15 : 35 }} />
+          <WhatsAppIcon sx={{ fontSize: windowArea <= 700 ? 30 : 35 }} />
         </a>
       </Link>
       <Link href="https://github.com/RuKatya" target="_blank">
         <a target="_blank">
-          <GitHubIcon sx={{ fontSize: windowArea <= 700 ? 15 : 35 }} />
+          <GitHubIcon sx={{ fontSize: windowArea <= 700 ? 30 : 35 }} />
         </a>
       </Link>
     </div>
