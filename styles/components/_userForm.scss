@@ -1,18 +1,14 @@
 .userForm {
-    // background: linear-gradient(-45deg, #f79e83, #f384ae, #7dcce9, #7bdfc8);
-    // background-size: 200% 200%;
-    // animation: gradient 5s ease infinite;
     height: 80vh;
     display: flex;
     flex-direction: column;
-    // color: white;
     justify-content: center;
     align-items: center;
 
     &__theForm {
         text-align: center;
         width: clamp(250px, 24%, 800px);
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(29, 51, 97, 0.559);
         display: flex;
         flex-direction: column;
         padding: 1% 3% 3% 3%;

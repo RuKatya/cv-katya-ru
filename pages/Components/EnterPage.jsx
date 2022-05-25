@@ -6,20 +6,22 @@ const EnterPage = () => {
     <div id="enterLayer" className="enterLayer">
       <div className="enterLayer__container" id="board"></div>
       <div className="enterLayer__greetings">
-        <p>Hello, I'm Katya Rukosuev.</p>
-        <p>I'm a full-stack web developer.</p>
+        <p>
+          Hello, I'm <span>Katya Rukosuev</span>.
+        </p>
+        <p>
+          I'm a <span>full-stack</span> web developer.
+        </p>
       </div>
       <div className="enterLayer__showProjects">
         <Link to="projects" smooth={true}>
           View my work
         </Link>
-        <span>
-          <NavigateNextIcon
-            sx={{
-              fontSize: 20,
-            }}
-          />
-        </span>
+        <NavigateNextIcon
+          sx={{
+            fontSize: 20,
+          }}
+        />
       </div>
     </div>
   );

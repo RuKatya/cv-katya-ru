@@ -14,6 +14,7 @@
     "@hookform/resolvers": "^2.8.10",
     "@mui/icons-material": "^5.8.0",
     "@mui/material": "^5.8.1",
+    "babel-preset-next": "^1.4.0",
     "mongodb": "^4.6.0",
     "next": "12.1.6",
     "react": "18.1.0",

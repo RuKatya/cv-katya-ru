@@ -12,7 +12,8 @@
 
 * {
   box-sizing: border-box;
-  transition: 0.8s ease;
+  transition: 0.5s ease;
+  letter-spacing: 0.1vw;
 }
 
 html,
@@ -35,6 +36,7 @@ a {
 
 h2 {
   font-size: $subtitle;
+  letter-spacing: 0.2vw;
 }
 
 

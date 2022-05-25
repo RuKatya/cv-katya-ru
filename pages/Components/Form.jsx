@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import * as yup from "yup";
 
 const Form = () => {
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState("");
   const [checkValidation, setCheckValidation] = useState("");
 
   let schema = yup.object().shape({
@@ -44,6 +44,8 @@ const Form = () => {
         if (message) {
           setCheckValidation("");
         }
+
+        evt.target.reset();
       })
       .catch((err) => {
         console.log(err.name);
@@ -51,8 +53,6 @@ const Form = () => {
         setCheckValidation(err.errors[0]);
         setMessage("");
       });
-
-    evt.target.reset();
   }
 
   return (
