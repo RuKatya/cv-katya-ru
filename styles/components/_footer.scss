@@ -30,9 +30,33 @@
         justify-content: space-around;
         font-size: clamp(18px, 1rem, 25px);
 
-        @media (max-width:700px) {
+        @media (max-width:800px) {
             width: 100%;
             padding: 6% 0%;
+        }
+
+        a {
+            background-color: rgba(20, 55, 67, 0.406);
+            display: flex;
+
+            padding: 2%;
+        }
+
+        svg {
+            // background-color: aquamarine;
+            // padding: 2%;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &--name {
+            margin: 0% 1%;
+            width: clamp(160px, 7vw, 200px);
+            // width: 7vw;
         }
     }
 }
