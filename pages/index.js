@@ -1,7 +1,7 @@
 import clientPromise from "../lib/mongodb";
 import EnterPage from './Components/EnterPage';
 import About from './Components/About';
-import Projects from './Components/Projects';
+import Projects from './Components/Project';
 import Form from './Components/Form';
 
 export default function Home({ projects }) {
@@ -9,11 +9,13 @@ export default function Home({ projects }) {
     <div className="mainPage">
       <EnterPage />
       <About />
-      {projects.map(project => {
-        return (
-          <Projects project={project} key={project._id} />
-        )
-      })}
+      <div id="projects">
+        {projects.map(project => {
+          return (
+            <Projects project={project} key={project._id} />
+          )
+        })}
+      </div>
       <Form />
     </div>
   )

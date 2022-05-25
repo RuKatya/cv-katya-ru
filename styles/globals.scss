@@ -7,6 +7,7 @@
 @import './components/about';
 @import './components/projects';
 @import './components/userForm';
+@import './components/navBar';
 
 * {
   box-sizing: border-box;
@@ -23,6 +24,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .mainPage {
