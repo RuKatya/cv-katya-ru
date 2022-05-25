@@ -21,11 +21,7 @@
 
     &__greetings {
         width: clamp(250px, 50%, 1000px);
-        position: absolute;
         color: white;
-        -ms-user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
         user-select: none;
         text-align: center;
         font-size: clamp(30px, 3vw, 50px);
@@ -33,5 +29,14 @@
         & p {
             margin: 0% 0%;
         }
+    }
+
+    &__showProjects {
+        font-size: clamp(18px, 1.3vw, 35px);
+        border: 1px solid white;
+        padding: 0.8% 1.8%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }

@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     z-index: 10;
-    transition: 0.1s ease;
+    transition: 0.5s ease;
 
     @media (max-width:700px) {
         flex-direction: column;
@@ -31,7 +31,7 @@
         color: white;
         display: none;
         width: clamp(50px, 7%, 70px);
-        transition: 0.1s ease;
+        transition: 0.5s ease;
         margin: 2% 1.5%;
 
         @media (max-width:700px) {

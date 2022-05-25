@@ -33,14 +33,7 @@ const NavBar = ({ scrollArea, windowArea }) => {
         />
       </button>
       {(toggleMenu || windowArea > 700) && (
-        <div
-          style={{
-            background:
-              toggleMenu && windowArea < 700 ? "rgb(29, 29, 29)" : "black",
-            transition: "0.5s ease",
-          }}
-          className="navBar__links"
-        >
+        <div className="navBar__links">
           <Link to="enterLayer" smooth={true} onClick={toggleNav}>
             <a>Home</a>
           </Link>
@@ -53,6 +46,7 @@ const NavBar = ({ scrollArea, windowArea }) => {
           <Link to="contact" smooth={true} onClick={toggleNav}>
             <a>Contact</a>
           </Link>
+          <Link to="" target="_blank"></Link>
         </div>
       )}
     </nav>
