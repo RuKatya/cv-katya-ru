@@ -30,9 +30,8 @@
             margin: 0% 0%;
 
             span {
-                // color: red;
                 background: -webkit-linear-gradient(315deg, rgba(255, 250, 63, 1) 0%, rgba(145, 107, 223, 1) 56%, rgb(120, 208, 240) 100%);
-                -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
         }
