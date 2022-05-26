@@ -7,23 +7,11 @@ import PreLoader from "./Loader/PreLoader";
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
 
-  const hasWindow = typeof window !== "undefined"
-
-
-
   useEffect(() => {
-    function loadPage() {
-      const loadpage = hasWindow ? window.onload = function () {
-        setTimeout(() => {
-          setLoading(false)
-        }, 5000)
-      } : null;
-      return loadpage;
-    }
-
-    loadPage()
-  }, [hasWindow])
-
+    setTimeout(() => {
+      setLoading(false)
+    }, 5000)
+  }, [loading])
 
   return (
     <>

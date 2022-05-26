@@ -1,3 +1,5 @@
+import Skills from "./Skills";
+
 const About = () => {
   return (
     <div id="about" className="about">
@@ -8,15 +10,7 @@ const About = () => {
           text about me text about metext about metext about metext about metext
           about me text about metext about metext about metext about me
         </p>
-        <ul className="about__content--skills">
-          <li>HTML</li>
-          <li>SCSS</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>NodeJS</li>
-          <li>MongoDB</li>
-        </ul>
+        <Skills />
       </div>
     </div>
   );

@@ -27,5 +27,15 @@
             font-size: clamp(20px, 1.3vw, 40px);
             list-style-type: none;
         }
+
+        &--eachSkill {
+            background-color: aquamarine;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+        }
+
+        // &--slider {
+        //     width: 80%;
+        // }
     }
 }
