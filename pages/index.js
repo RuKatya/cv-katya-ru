@@ -13,11 +13,11 @@ export default function Home({ projects }) {
       <div id="projects" className="projects">
         <h2>Projects</h2>
         <div className="projects__allProjects">
-          {projects.map(project => {
+          {projects ? projects.map(project => {
             return (
               <Projects project={project} key={project._id} />
             )
-          })}
+          }) : (<div>Loading</div>)}
           <Link href="https://frontend-challenges-projects.vercel.app/">
             <a className="projects__mentorProjectsBtn">
               Frontend Mentor Projects
