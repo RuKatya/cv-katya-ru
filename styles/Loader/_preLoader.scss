@@ -1,0 +1,46 @@
+.perload {
+    background-color: rgb(24, 27, 33);
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+
+        text-transform: uppercase;
+        display: inline-block;
+        border: 4px double rgba(255, 255, 255, .25);
+        border-width: 4px 0;
+        padding: 1.5em 0em;
+        width: clamp(250px, 40%, 1000px);
+        text-align: center;
+
+        span {
+            font-size: clamp(25px, 2.5rem, 60px);
+            letter-spacing: 0.5em;
+            padding: .25em 0 .325em;
+            display: block;
+            margin: 0 auto;
+            text-shadow: 0 0 50px rgba(255, 255, 255, .5);
+            background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: aitf 80s linear infinite;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+        }
+    }
+}
+
+@keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}

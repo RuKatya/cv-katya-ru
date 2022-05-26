@@ -1,30 +1,23 @@
-import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Head from 'next/head'
 import '../styles/globals.scss'
 import Layout from './Layout'
+import PreLoader from "./Loader/PreLoader";
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(false);
-
-  const router = useRouter()
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Обработка начала загрузки
-    router.events.on("routeChangeStart", () => {
-      setLoading(true);
-    });
-    // Обработка окончания загрузки
-    router.events.on("routeChangeComplete", () => {
-      setLoading(false);
-    });
-  }, []);
+    setTimeout(() => {
+      setLoading(false)
+    }, 5000)
+
+  }, [loading]);
 
   return (
     <>
       {
-        // Если загружается то показываем прелоадер
-        loading ? <div style={{ color: "black" }}>loading</div> : (
+        loading ? <PreLoader /> : (
           <Layout>
             <Head>
               <meta charSet="utf-8" />
