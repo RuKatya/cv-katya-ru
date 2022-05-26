@@ -14,7 +14,9 @@ const Skills = () => {
       {skills.map((skill) => {
         return (
           <li key={skill.index} className="about__content--eachSkill">
-            <span>{skill.name}</span>
+            <span className="about__content--eachSkill--skillName">
+              {skill.name}
+            </span>
             <span>
               <input
                 type="range"
@@ -23,6 +25,7 @@ const Skills = () => {
                 step="1"
                 value={skill.percent}
                 className="about__content--slider"
+                // disabled
               />
             </span>
           </li>
