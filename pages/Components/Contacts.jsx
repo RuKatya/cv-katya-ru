@@ -7,7 +7,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const Contacts = ({ windowArea }) => {
   return (
     <div className="footerBar__contactLinks">
-      <Link href="https://www.linkedin.com/in/katya-rukosuev/" target="_blank">
+      <Link href="https://www.linkedin.com/in/katya-rukosuev/">
         <a target="_blank">
           <LinkedInIcon sx={{ fontSize: windowArea <= 700 ? 30 : 40 }} />
         </a>
@@ -22,7 +22,7 @@ const Contacts = ({ windowArea }) => {
           <WhatsAppIcon sx={{ fontSize: windowArea <= 700 ? 30 : 35 }} />
         </a>
       </Link>
-      <Link href="https://github.com/RuKatya" target="_blank">
+      <Link href="https://github.com/RuKatya">
         <a target="_blank">
           <GitHubIcon sx={{ fontSize: windowArea <= 700 ? 30 : 35 }} />
         </a>
