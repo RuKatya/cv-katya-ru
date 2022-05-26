@@ -4,6 +4,10 @@
     flex-direction: column;
     align-items: center;
 
+    @media (max-width:1000px) {
+        padding: 10% 0% 20% 0%;
+    }
+
     h2 {
         text-align: center;
     }
@@ -69,6 +73,7 @@
 
         @media (max-width: 1000px) {
             grid-column: 1/2;
+            margin: 1% 0%;
         }
     }
 }

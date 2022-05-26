@@ -7,11 +7,15 @@
 
     &__theForm {
         text-align: center;
-        width: clamp(250px, 24%, 800px);
+        width: clamp(250px, 30%, 800px);
         background-color: rgba(29, 51, 97, 0.559);
         display: flex;
         flex-direction: column;
         padding: 1% 3% 3% 3%;
+
+        @media (max-width: 1000px) {
+            width: clamp(300px, 60%, 800px);
+        }
 
         & input,
         & button,

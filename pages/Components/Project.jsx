@@ -8,8 +8,8 @@ const Project = ({ project }) => {
           <Image
             src={project.mainImg}
             alt={project.title}
-            width={600}
-            height={600}
+            width={450}
+            height={500}
             className="projects__singleProject--img"
           />
           <div className="projects__singleProject--title">
