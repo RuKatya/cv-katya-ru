@@ -42,6 +42,7 @@
             margin: 0% auto;
             // justify-items: center;
             // padding: 0% 1%;
+            align-items: center;
 
             @media (max-width:750px) {
                 width: 100%;
@@ -50,45 +51,55 @@
                 padding: 0.5% 0%;
             }
 
-            &--skillName {
+            &__skillName {
                 color: rgb(59, 148, 226);
             }
 
-        }
+            &__slider {
+                width: 95%;
+                height: 15px;
+                background-color: rgb(209, 207, 207);
+                transition: 0.8s ease;
 
-        &--slider {
-            overflow: hidden;
-            -webkit-appearance: none;
-            appearance: none;
-            width: 95%;
-            height: 15px;
-            // background: #d3d3d3;
-            // outline: none;
-            // opacity: 0.7;
-            -webkit-transition: .2s;
-            // transition: opacity .2s;'
-            background-color: rgb(209, 207, 207);
-
-
-            &::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                appearance: none;
-                width: 20px;
-                height: 20px;
-                background: #8133ffba;
-                box-shadow:
-                    -20px 0 #8133ffba, -40px 0 #8133ffba, -60px 0 #8133ffba,
-                    -80px 0 #8133ffba, -100px 0 #8133ffba, -120px 0 #8133ffba,
-                    -140px 0 #8133ffba, -160px 0 #8133ffba, -180px 0 #8133ffba,
-                    -200px 0 #8133ffba, -220px 0 #8133ffba, -240px 0 #8133ffba,
-                    -260px 0 #8133ffba, -280px 0 #8133ffba, -300px 0 #8133ffba,
-                    -320px 0 #8133ffba,
+                &Thumb {
+                    height: 15px;
+                    background-color: #8133ffba;
+                    transition: 1.5s ease;
+                }
             }
         }
 
-        &::-moz-range-track {
-            background-color: #5082e0;
-        }
-    }
 
+        // &--slider {
+        //     overflow: hidden;
+        //     -webkit-appearance: none;
+        //     appearance: none;
+        //     width: 95%;
+        //     height: 15px;
+        //     // background: #d3d3d3;
+        //     // outline: none;
+        //     // opacity: 0.7;
+        //     -webkit-transition: .2s;
+        //     // transition: opacity .2s;'
+        //     background-color: rgb(209, 207, 207);
+
+
+        //     &::-webkit-slider-thumb {
+        //         -webkit-appearance: none;
+        //         appearance: none;
+        //         width: 20px;
+        //         height: 20px;
+        //         background: #8133ffba;
+        //         box-shadow:
+        //             -20px 0 #8133ffba, -40px 0 #8133ffba, -60px 0 #8133ffba,
+        //             -80px 0 #8133ffba, -100px 0 #8133ffba, -120px 0 #8133ffba,
+        //             -140px 0 #8133ffba, -160px 0 #8133ffba, -180px 0 #8133ffba,
+        //             -200px 0 #8133ffba, -220px 0 #8133ffba, -240px 0 #8133ffba,
+        //             -260px 0 #8133ffba, -280px 0 #8133ffba, -300px 0 #8133ffba,
+        //             -320px 0 #8133ffba,
+        //     }
+        // }
+    }
 }
+
+@keyframes shadow {}

@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 const Skills = () => {
   const skills = [
     { name: "HTML", percent: 80 },
@@ -9,16 +11,50 @@ const Skills = () => {
     { name: "MongoDB", percent: 50 },
   ];
 
+  const [widthSkill, setWidthSkill] = useState(false);
+  const [scrollArea, setScrollArea] = useState(getWindowScroll());
+
+  const hasWindow = typeof window !== "undefined";
+
+  function getWindowScroll() {
+    const heightScroll = hasWindow ? window.scrollY : 0;
+    return heightScroll;
+  }
+
+  useEffect(() => {
+    const setScrollHeight = () => {
+      setScrollArea(window.scrollY);
+    };
+
+    window.addEventListener("scroll", setScrollHeight);
+  }, [hasWindow]);
+
+  useEffect(() => {
+    if (scrollArea > 400) {
+      setTimeout(() => {
+        setWidthSkill(true);
+      }, 0);
+    }
+  });
+  console.log(scrollArea);
   return (
     <ul className="about__content--skills">
       {skills.map((skill) => {
         return (
           <li key={skill.index} className="about__content--eachSkill">
-            <span className="about__content--eachSkill--skillName">
+            <span className="about__content--eachSkill__skillName">
               {skill.name}
             </span>
-            <span>
-              <input
+
+            <div className="about__content--eachSkill__slider">
+              <div
+                className="about__content--eachSkill__sliderThumb"
+                style={{
+                  width: widthSkill ? `${skill.percent}%` : 0,
+                }}
+              ></div>
+            </div>
+            {/* <input
                 type="range"
                 min="0"
                 max="100"
@@ -26,8 +62,7 @@ const Skills = () => {
                 value={skill.percent}
                 className="about__content--slider"
                 // disabled
-              />
-            </span>
+              /> */}
           </li>
         );
       })}
