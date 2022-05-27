@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps }) {
               <meta name="description" content="Portfolio of Katya Rukosuev" /> {/* ADD DESCRIPTION AND KEYWORDS */}
               <meta name="keywords" content="Katya-Ru, Katya Ru, CV Katya Ru, CV" />
               <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui" />
+              <title>CV Katya Ru</title>
             </Head>
 
             <Component {...pageProps} />
