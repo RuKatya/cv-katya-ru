@@ -36,12 +36,12 @@ const Skills = () => {
       }, 0);
     }
   });
-  console.log(scrollArea);
+  // console.log(scrollArea);
   return (
     <ul className="about__content--skills">
-      {skills.map((skill) => {
+      {skills.map((skill, index) => {
         return (
-          <li key={skill.index} className="about__content--eachSkill">
+          <li key={index} className="about__content--eachSkill">
             <span className="about__content--eachSkill__skillName">
               {skill.name}
             </span>
@@ -54,15 +54,6 @@ const Skills = () => {
                 }}
               ></div>
             </div>
-            {/* <input
-                type="range"
-                min="0"
-                max="100"
-                step="1"
-                value={skill.percent}
-                className="about__content--slider"
-                // disabled
-              /> */}
           </li>
         );
       })}

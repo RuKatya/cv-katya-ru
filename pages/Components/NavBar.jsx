@@ -1,14 +1,24 @@
 import { Link, animateScroll as scroll } from "react-scroll";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBar = ({ scrollArea, windowArea }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [flag, setFlag] = useState(false);
 
   const toggleNav = (e) => {
     setToggleMenu(!toggleMenu);
   };
 
+  useEffect(() => {
+    if (windowArea < 700) {
+      setFlag(true);
+    } else {
+      setFlag(false);
+    }
+  }, [windowArea]);
+
+  console.log(flag);
   return (
     <nav
       className="navBar"
@@ -34,16 +44,48 @@ const NavBar = ({ scrollArea, windowArea }) => {
       </button>
       {(toggleMenu || windowArea > 700) && (
         <div className="navBar__links">
-          <Link to="enterLayer" smooth={true} onClick={toggleNav}>
+          <Link
+            to="enterLayer"
+            smooth={true}
+            onClick={() => {
+              if (flag === true) {
+                toggleNav();
+              }
+            }}
+          >
             Home
           </Link>
-          <Link to="about" smooth={true} onClick={toggleNav}>
+          <Link
+            to="about"
+            smooth={true}
+            onClick={() => {
+              if (flag === true) {
+                toggleNav();
+              }
+            }}
+          >
             About
           </Link>
-          <Link to="projects" smooth={true} onClick={toggleNav}>
+          <Link
+            to="projects"
+            smooth={true}
+            onClick={() => {
+              if (flag === true) {
+                toggleNav();
+              }
+            }}
+          >
             Projects
           </Link>
-          <Link to="contact" smooth={true} onClick={toggleNav}>
+          <Link
+            to="contact"
+            smooth={true}
+            onClick={() => {
+              if (flag === true) {
+                toggleNav();
+              }
+            }}
+          >
             Contact
           </Link>
           <Link to="" target="_blank"></Link>
