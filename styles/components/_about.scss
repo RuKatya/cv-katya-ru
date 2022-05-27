@@ -1,4 +1,15 @@
 .about {
+    height: 100vh;
+    padding: 7% 0% 8% 0%;
+
+    @media (max-width:700px) {
+        padding: 10% 0% 5% 0%;
+    }
+
+    // @media (max-width:555px) {
+    //     padding: 15% 0% 30% 0%;
+    // }
+
     h2 {
         text-align: center;
     }
@@ -18,8 +29,13 @@
 
         &--infoText {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(15px, 1.1vw, 40px);
+            font-size: clamp(20px, 1.1vw, 40px);
             padding: 1% 0%;
+
+            @media (max-width:1000px) {
+                padding: 3% 0% 15% 0%;
+            }
+
         }
 
         &--skills {
