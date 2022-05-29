@@ -18,25 +18,24 @@ const NavBar = ({ scrollArea, windowArea }) => {
     }
   }, [windowArea]);
 
-  console.log(flag);
   return (
     <nav
       className="navBar"
       style={{
-        background: scrollArea > 750 ? "rgb(29, 29, 29)" : "black",
-        color: scrollArea > 750 ? "white" : "rgb(212, 212, 212)",
+        background: scrollArea > 750 ? "#0f1319" : "none",
+        // color: "#C3C6C7",
       }}
     >
       <button
         onClick={toggleNav}
         className="navBar__menuBtn"
         style={{
-          background: scrollArea > 750 ? "rgb(29, 29, 29)" : "black",
+          background: "none",
         }}
       >
         <MenuIcon
           sx={{
-            color: scrollArea > 750 ? "white" : "rgb(94, 93, 93)",
+            color: "#C3C6C7",
             width: windowArea < 400 ? "40px" : "50px",
             height: windowArea < 400 ? "40px" : "50px",
           }}

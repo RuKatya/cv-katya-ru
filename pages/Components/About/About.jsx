@@ -1,3 +1,4 @@
+import MoreMe from "./MoreMe";
 import Skills from "./Skills";
 
 const About = () => {
@@ -12,6 +13,7 @@ const About = () => {
         </p>
         <Skills />
       </div>
+      <MoreMe />
     </div>
   );
 };

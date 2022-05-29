@@ -4,6 +4,7 @@
     top: 0;
     z-index: 10;
     transition: 0.5s ease;
+    color: #C3C6C7;
 
     &__links {
         display: flex;
@@ -23,11 +24,12 @@
 
     &__menuBtn {
         border: none;
-        color: white;
+        // color: white;
+        // color: #C3C6C7;
         display: none;
         width: clamp(50px, 7%, 70px);
         transition: 0.5s ease;
-        margin: 2% 1.5%;
+        margin: 1% 2% 0% 2%;
 
         @media (max-width:700px) {
             display: block;
