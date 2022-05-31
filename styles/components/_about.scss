@@ -55,17 +55,17 @@
             }
 
             &__skillName {
-                color: #66fcf1;
+                color: #cb88ff;
             }
 
             &__slider {
                 width: 95%;
                 height: 15px;
-                background-color: #C3C6C7;
+                background-color: #e9e9e9;
 
                 &Thumb {
                     height: 15px;
-                    background-color: #2a706d;
+                    background-color: rgba(0, 119, 255, 0.6);
                     transition: 1.5s ease;
                 }
             }
