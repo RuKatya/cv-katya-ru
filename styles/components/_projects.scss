@@ -1,32 +1,26 @@
 .projects {
+    background-color: antiquewhite;
     padding: 5% 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media (max-width:1000px) {
-        padding: 10% 0% 20% 0%;
-    }
-
-    @media (max-width:750px) {
-        padding: 10% 0% 30% 0%;
-    }
-
-    h2 {
-        text-align: center;
+        padding: 0% 0% 20vh 0%;
     }
 
     &__allProjects {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: clamp(250px, 60%, 1500px);
+        // background-color: brown;
         justify-items: center;
         align-items: center;
-        column-gap: 3%;
+        gap: 3% 5%;
 
-        @media (max-width: 1000px) {
+        @media (max-width: 750px) {
             grid-template-columns: repeat(1, 1fr);
-            row-gap: 5%;
+            // row-gap: 5%;
             width: clamp(250px, 80%, 1500px);
         }
     }
@@ -69,13 +63,13 @@
 
     &__mentorProjectsBtn {
         background-color: #2a706d;
-        font-size: clamp(18px, 1.3rem, 30px);
+        font-size: clamp(18px, 1.2rem, 30px);
         padding: 0.5% 1.5%;
         grid-column: 1/4;
         margin: 4% 0%;
 
-        @media (max-width: 1000px) {
-            grid-column: 1/2;
+        @media (max-width: 750px) {
+            grid-column: 1/1;
             margin: 1% 0%;
         }
     }
