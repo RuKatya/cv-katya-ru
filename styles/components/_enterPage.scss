@@ -30,7 +30,9 @@
             margin: 0% 0%;
 
             span {
-                background: -webkit-linear-gradient(195deg, rgba(42, 112, 109, 1) 0%, rgba(102, 252, 241, 1) 35%);
+                background: -webkit-linear-gradient(195deg, rgba(50, 130, 126, 1) 0%, rgba(102, 252, 241, 1) 25%, rgba(225, 102, 252, 1) 96%);
+                background-size: 200% 200%;
+                animation: gradient 7s ease infinite;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -48,5 +50,19 @@
         @media (max-width:700px) {
             padding: 0.5% 2%;
         }
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
