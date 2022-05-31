@@ -22,8 +22,7 @@ const NavBar = ({ scrollArea, windowArea }) => {
     <nav
       className="navBar"
       style={{
-        background: scrollArea > 750 ? "#0f1319" : "none",
-        // color: "#C3C6C7",
+        background: scrollArea > 750 ? "#0f1319" : "#0B0C10",
       }}
     >
       <button
