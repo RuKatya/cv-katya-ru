@@ -20,7 +20,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: clamp(250px, 60%, 1500px);
-        // background-color: brown;
         justify-items: center;
         align-items: center;
         column-gap: 3%;
