@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-const Project = ({ project }) => {
+const Project = ({ project, getProjects }) => {
   return (
     <>
       {project ? (
@@ -14,11 +15,20 @@ const Project = ({ project }) => {
           />
           <div className="projects__singleProject--title">
             <h3>{project.title}</h3>
-            <button>Learn More</button>
+            <button
+              onClick={() => {
+                getProjects(project._id);
+              }}
+            >
+              Learn More
+            </button>
           </div>
         </div>
       ) : (
-        <div>Loading</div>
+        <div className="loadingProject">
+          <div>Loading</div>
+          <div className="loadingProject__dots">...</div>
+        </div>
       )}
     </>
   );

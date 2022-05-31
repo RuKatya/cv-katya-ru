@@ -2,29 +2,50 @@ import Link from "next/link";
 import clientPromise from "../lib/mongodb";
 import EnterPage from './Components/EnterPage';
 import About from './Components/About/About';
-import Projects from './Components/Project';
+// import Projects from './Components/Project';
 import Form from './Components/Form';
+import Projects from "./Components/Projects/Projects";
+import Books from "./Components/Books";
+import { useState, useEffect } from "react";
+import DetealsProject from "./Components/Projects/DetealsProject";
 
 export default function Home({ projects }) {
+  const [openProject, setOpenProject] = useState(false);
+  const [detealsProject, setDetealsProject] = useState({});
+
+
+  function getProjects(idProject) {
+    setOpenProject(true);
+    const projectFind = projects.filter((i) => i._id == idProject);
+    setDetealsProject(projectFind[0]);
+  }
+
+  useEffect(() => {
+    function change() {
+      if (openProject === true) {
+        console.log(`true`)
+        document.body.style = 'overflow-y:hidden'
+      } else {
+        document.body.style = 'overflow-y:scroll'
+      }
+    }
+
+    change();
+  }, [openProject])
   return (
     <div className="mainPage">
       <EnterPage />
       <About />
-      <div id="projects" className="projects">
-        <h2>Projects</h2>
-        <div className="projects__allProjects">
-          {projects ? projects.map(project => {
-            return (
-              <Projects project={project} key={project._id} />
-            )
-          }) : (<div>Loading</div>)}
-          <Link href="https://frontend-challenges-projects.vercel.app/">
-            <a className="projects__mentorProjectsBtn">
-              Frontend Mentor Projects
-            </a>
-          </Link>
+      <Projects projects={projects} setOpenProject={setOpenProject} openProject={openProject} getProjects={getProjects} />
+      {openProject ? (
+        <div>
+          <DetealsProject
+            detealsProject={detealsProject}
+            setOpenProject={setOpenProject}
+          />
         </div>
-      </div>
+      ) : null}
+      <Books />
       <Form />
     </div>
   )

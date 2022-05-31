@@ -8,6 +8,7 @@
 @import './components/enterPage';
 @import './components/about';
 @import './components/projects';
+@import './components/book';
 @import './components/userForm';
 @import './components/footer';
 
@@ -57,4 +58,39 @@ li,
 ul {
   padding: 0;
   margin: 0;
+  list-style: none;
+}
+
+.loadingProject {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+
+  &__dots {
+    width: 20px;
+    -webkit-animation: type 2s steps(40, end) infinite;
+    animation: type 2s steps(40, end) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 20px;
+  }
+}
+
+@-webkit-keyframes type {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 20px;
+  }
 }
