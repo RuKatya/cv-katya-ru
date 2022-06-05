@@ -28,7 +28,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        font-size: clamp(18px, 1rem, 25px);
+        font-size: clamp(18px, 1vw, 25px);
 
         @media (max-width:800px) {
             width: 100%;
