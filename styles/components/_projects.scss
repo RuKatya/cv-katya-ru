@@ -93,11 +93,11 @@
 
     &__window {
         background-color: rgba(29, 51, 97);
-        width: clamp(300px, 60%, 1500px);
-        height: 70vh;
+        width: clamp(300px, 30%, 1500px);
+        height: 85vh;
 
         &--closeBtn {
-            position: relative;
+            position: absolute;
             top: 2%;
             left: 1%;
             cursor: pointer;
