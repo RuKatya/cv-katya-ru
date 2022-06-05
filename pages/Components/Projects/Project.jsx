@@ -7,7 +7,7 @@ const Project = ({ project, getProjects }) => {
       {project ? (
         <div key={project._id} className="projects__singleProject">
           <Image
-            src={project.mainImg}
+            src={`/img/${project.folder}/${project.mainImg}.jpg`}
             alt={project.title}
             width={450}
             height={500}
