@@ -16,6 +16,7 @@ const Project = ({ project, getProjects }) => {
           <div className="projects__singleProject--title">
             <h3>{project.title}</h3>
             <button
+              className="projects__singleProject--learnMoreBtn"
               onClick={() => {
                 getProjects(project._id);
               }}

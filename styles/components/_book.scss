@@ -9,12 +9,12 @@
     padding: 12% 0%;
 
     @media (max-width:750px) {
-        padding: 20% 0%;
+        padding: 25% 0%;
     }
 
     &__eachBook {
         width: 80%;
-        font-size: clamp(25px, 2rem, 50px);
+        font-size: clamp(25px, 2vw, 50px);
         font-family: 'Cormorant Garamond', serif;
         font-family: 'Tapestry', cursive;
     }

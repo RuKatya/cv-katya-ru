@@ -2,6 +2,8 @@ import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import UsedToProject from "./Deteals/UsedToProject";
 import ImagesProjec from "./Deteals/ImagesProjec";
+import DescriptionProject from "./Deteals/DescriptionProject";
+import LinksProject from "./Deteals/LinksProject";
 
 const DetealsProject = ({ detealsProject, setOpenProject }) => {
   return (
@@ -21,6 +23,14 @@ const DetealsProject = ({ detealsProject, setOpenProject }) => {
 
         {/* USED TO */}
         <UsedToProject used={detealsProject.usedTo} />
+
+        {/* DESCRIPTION */}
+        <DescriptionProject desc={detealsProject.desc} />
+
+        {/* LINKS */}
+        <LinksProject
+          links={{ git: detealsProject.github, url: detealsProject.url }}
+        />
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Project from "./Project";
-// import DetealsProject from "./DetealsProject";
 import { useEffect, useState } from "react";
 
 const Projects = ({ projects, openProject, setOpenProject, getProjects }) => {

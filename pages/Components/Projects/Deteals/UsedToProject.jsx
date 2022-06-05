@@ -1,9 +1,6 @@
-import React from "react";
-
 const UsedToProject = ({ used }) => {
-  // console.log(used);
   return (
-    <ul>
+    <ul className="detealsProject__window--usedTo">
       {used.map((use, index) => {
         return <li key={index}>{use}</li>;
       })}
