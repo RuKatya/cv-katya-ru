@@ -3,12 +3,12 @@ import Slider from "react-slick";
 
 const ImagesProjec = ({ project }) => {
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dotsClass: "slick-dots slick-thumb",
+    // dotsClass: "slick-dots slick-thumb",
   };
 
   return (
