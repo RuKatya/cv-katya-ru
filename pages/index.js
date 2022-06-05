@@ -1,8 +1,6 @@
-import Link from "next/link";
 import clientPromise from "../lib/mongodb";
 import EnterPage from './Components/EnterPage';
 import About from './Components/About/About';
-// import Projects from './Components/Project';
 import Form from './Components/Form';
 import Projects from "./Components/Projects/Projects";
 import Books from "./Components/Books";
