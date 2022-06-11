@@ -2,12 +2,14 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Project = ({ project, getProjects }) => {
+  const src = `/img/${project.folder}/${project.mainImg}.jpg`;
+
   return (
     <>
       {project ? (
         <div key={project._id} className="projects__singleProject">
           <Image
-            src={`/img/${project.folder}/${project.mainImg}.jpg`}
+            src={src}
             alt={project.title}
             width={450}
             height={500}
