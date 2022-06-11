@@ -6,7 +6,7 @@ const NavBar = ({ scrollArea, windowArea }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [flag, setFlag] = useState(false);
 
-  const toggleNav = (e) => {
+  const toggleNav = () => {
     setToggleMenu(!toggleMenu);
   };
 
