@@ -12,7 +12,7 @@ const About = () => {
 
           <p>
             I love creating user-friendly and easy to use websites, to get
-            better I reading related books. I am always improving my knowledge
+            better I'm reading related books. I'm always improving my knowledge
             in web development.
           </p>
 
