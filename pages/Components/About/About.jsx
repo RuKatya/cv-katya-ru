@@ -28,7 +28,21 @@ const About = () => {
             <Link to="contact" smooth={true} style={{ color: "#66FCF1" }}>
               form
             </Link>{" "}
-            or send a message via Linkdin or E-Mail.
+            or send a message via{" "}
+            <a
+              href="https://www.linkedin.com/in/katya-rukosuev/"
+              style={{ color: "#66FCF1" }}
+            >
+              Linkedin
+            </a>{" "}
+            or{" "}
+            <a
+              href="mailto:katya.ru.fullstack@gmail.com"
+              style={{ color: "#66FCF1" }}
+            >
+              E-Mail
+            </a>
+            .
           </p>
         </div>
         <Skills />
