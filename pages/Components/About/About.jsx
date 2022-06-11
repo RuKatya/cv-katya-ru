@@ -22,8 +22,9 @@ const About = () => {
           </p>
 
           <p>
-            I will help you develop your ideas on the site. You can contact me
-            via the{" "}
+            I will help you develop your ideas on the site. I’m very passionate
+            about my job and motivated to create new and adventurous websites.
+            You can contact me via the{" "}
             <Link to="contact" smooth={true} style={{ color: "#66FCF1" }}>
               form
             </Link>{" "}
