@@ -19,7 +19,6 @@ const Books = () => {
             <p>
               {book.name}, {book.author}
             </p>
-            {/* <p>{book.author}</p> */}
           </div>
         );
       })}

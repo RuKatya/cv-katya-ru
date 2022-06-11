@@ -6,11 +6,18 @@ const About = () => {
     <div id="about" className="about">
       <h2>About</h2>
       <div className="about__content">
-        <p className="about__content--infoText">
-          text about me text about metext about metext about metext about me
-          text about me text about metext about metext about metext about metext
-          about me text about metext about metext about metext about me
-        </p>
+        <div className="about__content--infoText">
+          <p>
+            Hi, I'm Katya. I'll help you develop your ideas. I always improve my
+            skills.
+          </p>
+          <p>
+            I love creating websites that are user-friendly and easy to use, I
+            read related books.
+          </p>
+
+          <p>Every time I finnish a project I start thinking about the next.</p>
+        </div>
         <Skills />
       </div>
       <MoreMe />
