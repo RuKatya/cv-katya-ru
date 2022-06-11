@@ -7,16 +7,23 @@ const About = () => {
       <h2>About</h2>
       <div className="about__content">
         <div className="about__content--infoText">
+          <p>Hi, I'm Katya.</p>
+
           <p>
-            Hi, I'm Katya. I'll help you develop your ideas. I always improve my
-            skills.
-          </p>
-          <p>
-            I love creating websites that are user-friendly and easy to use, I
-            read related books.
+            I love creating user-friendly and easy to use websites, to get
+            better I reading related books. I am always improving my knowledge
+            in web development.
           </p>
 
-          <p>Every time I finnish a project I start thinking about the next.</p>
+          <p>
+            Every time I finish a project, I start thinking about the next one
+            and how it can be done more useful.
+          </p>
+
+          <p>
+            I will help you develop your ideas on the site. You can contact me
+            via the form or send a message via Linkdin or E-Mail.
+          </p>
         </div>
         <Skills />
       </div>

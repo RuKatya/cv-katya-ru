@@ -24,7 +24,7 @@
 
         &--infoText {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(20px, 1.2vw, 40px);
+            font-size: clamp(20px, 1vw, 40px);
             padding: 1% 0%;
 
             @media (max-width:1000px) {
