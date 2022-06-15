@@ -20,7 +20,7 @@ const Projects = ({ projects, openProject, setOpenProject, getProjects }) => {
         ) : (
           <div>Loading</div>
         )}
-        <Link href="https://frontend-challenges-projects.vercel.app/">
+        <Link href="https://web-quests.herokuapp.com/">
           <a className="projects__mentorProjectsBtn">
             Frontend Mentor Projects
           </a>
