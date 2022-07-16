@@ -23,8 +23,20 @@
         }
 
         &--btn {
-            background-color: rgb(208, 205, 205);
             cursor: pointer;
+
+            box-shadow:
+                0 0 0 0 rgb(169, 168, 168),
+                inset 6em 3.5em 0 0 grey;
+
+            &:hover,
+            &:focus {
+                color: white;
+                background-color: rgb(22, 94, 99);
+                box-shadow:
+                    0.3em 0.3em 0 0 rgb(13, 65, 69),
+                    inset 0.3em 0.3em 0 0 rgb(5, 136, 145);
+            }
         }
 
         & input,
