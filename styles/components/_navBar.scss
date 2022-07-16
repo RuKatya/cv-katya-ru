@@ -14,7 +14,12 @@
 
         @media (max-width:700px) {
             flex-direction: column;
-            padding-left: 5%;
+            align-items: center;
+            margin: 1% 0% 2% 0%;
+            // width: 100%;
+            // margin: 0% auto;
+            // text-align: center;
+            // padding-left: 10%;
         }
 
         a {
