@@ -18,15 +18,41 @@
         }
 
         a {
-            margin: 0% 2%;
+            margin: 0% 0.2%;
             font-size: clamp(20px, 1.1vw, 30px);
+            letter-spacing: 2px;
+            width: clamp(105px, 7%, 150px);
+            text-align: center;
+
+            &:hover,
+            &:active {
+                letter-spacing: 4px;
+            }
+
+            &::after {
+                backface-visibility: hidden;
+                border-bottom: 1px solid white;
+                bottom: 0px;
+                content: " ";
+                display: block;
+                margin: 0 auto;
+                position: relative;
+                transition: all 280ms ease-in-out;
+                width: 0;
+            }
+
+            &:hover:after,
+            &:hover:before {
+                backface-visibility: hidden;
+                border-color: #fff;
+                transition: width 250ms ease-in-out;
+                width: 100%;
+            }
         }
     }
 
     &__menuBtn {
         border: none;
-        // color: white;
-        // color: #C3C6C7;
         display: none;
         width: clamp(50px, 7%, 70px);
         transition: 0.5s ease;

@@ -31,11 +31,9 @@
 
             &:hover,
             &:focus {
-                color: white;
-                background-color: rgb(22, 94, 99);
                 box-shadow:
-                    0.3em 0.3em 0 0 rgb(13, 65, 69),
-                    inset 0.3em 0.3em 0 0 rgb(5, 136, 145);
+                    0.3em 0.3em 0 0 #2a706d,
+                    inset 0.3em 0.3em 0 0 #2a706d;
             }
         }
 

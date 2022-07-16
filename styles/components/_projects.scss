@@ -74,11 +74,21 @@
     }
 
     &__mentorProjectsBtn {
-        background-color: #2a706d;
+        box-shadow:
+            0 0 0 0 #2a706d,
+            inset 6em 3.5em 0 0 #2a706d;
+
         font-size: clamp(18px, 1.1vw, 30px);
         padding: 0.5% 1.5%;
         grid-column: 1/4;
         margin: 4% 0%;
+
+        &:hover {
+            box-shadow:
+                0.2em 0.2em 0 0 #2a706d,
+                inset 0.2em 0.2em 0 0 #2a706d;
+        }
+
 
         @media (max-width: 750px) {
             grid-column: 1/1;

@@ -13,16 +13,20 @@ const EnterPage = () => {
           I'm a <span>Front-end</span> web developer.
         </p>
       </div>
-      <div className="enterLayer__showProjects">
-        <Link to="projects" smooth={true}>
-          View my work
-        </Link>
-        <NavigateNextIcon
+      {/* <div className="enterLayer__showProjects"> */}
+      <Link
+        to="projects"
+        smooth={true}
+        className="enterLayer__showProjects effect"
+      >
+        View my work
+      </Link>
+      {/* <NavigateNextIcon
           sx={{
             fontSize: 20,
           }}
-        />
-      </div>
+        /> */}
+      {/* </div> */}
     </div>
   );
 };
