@@ -15,7 +15,15 @@ const Footer = ({ windowArea }) => {
         <p className="footerBar__copyright--symbol">
           <CopyrightIcon sx={{ fontSize: windowArea > 700 ? 15 : 20 }} />
         </p>
-        <p className="footerBar__copyright--name">Katya Rukosuev 2022</p>
+        <p className="footerBar__copyright--name">
+          <a
+            href="https://www.linkedin.com/in/katya-rukosuev/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Katya Rukosuev 2022
+          </a>
+        </p>
       </div>
     </footer>
   );

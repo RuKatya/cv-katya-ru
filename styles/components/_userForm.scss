@@ -22,7 +22,10 @@
             width: clamp(300px, 60%, 800px);
         }
 
-
+        &--btn {
+            background-color: rgb(208, 205, 205);
+            cursor: pointer;
+        }
 
         & input,
         & button,

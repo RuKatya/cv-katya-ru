@@ -32,6 +32,8 @@ const About = () => {
             <a
               href="https://www.linkedin.com/in/katya-rukosuev/"
               style={{ color: "#66FCF1" }}
+              target="_blank"
+              rel="noreferrer"
             >
               Linkedin
             </a>{" "}
@@ -39,6 +41,8 @@ const About = () => {
             <a
               href="mailto:katya.ru.fullstack@gmail.com"
               style={{ color: "#66FCF1" }}
+              target="_blank"
+              rel="noreferrer"
             >
               E-Mail
             </a>

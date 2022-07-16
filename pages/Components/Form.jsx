@@ -81,7 +81,9 @@ const Form = () => {
           required
           minLength={2}
         ></textarea>
-        <button type="submit">Send</button>
+        <button type="submit" className="userForm__theForm--btn">
+          Send
+        </button>
       </form>
     </div>
   );
