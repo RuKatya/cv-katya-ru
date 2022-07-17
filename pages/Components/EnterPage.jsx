@@ -10,7 +10,7 @@ const EnterPage = () => {
           Hello, I'm <span>Katya Rukosuev</span>.
         </p>
         <p>
-          I'm a <span>Front-end</span> web developer.
+          I'm a <span>FullStack</span> web developer.
         </p>
       </div>
       {/* <div className="enterLayer__showProjects"> */}
