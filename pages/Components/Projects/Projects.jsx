@@ -20,7 +20,7 @@ const Projects = ({ projects, openProject, setOpenProject, getProjects }) => {
         ) : (
           <div>Loading</div>
         )}
-        <Link href="https://frontend-challanges.herokuapp.com/">
+        <Link href="https://frontend-projects.onrender.com//">
           <a className="projects__mentorProjectsBtn">
             Frontend Mentor Projects
           </a>
