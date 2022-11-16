@@ -1,5 +1,4 @@
 import { Link, animateScroll as scroll } from "react-scroll";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 const EnterPage = () => {
   return (
@@ -7,13 +6,12 @@ const EnterPage = () => {
       <div className="enterLayer__container" id="board"></div>
       <div className="enterLayer__greetings">
         <p>
-          Hello, I'm <span>Katya Rukosuev</span>.
+          Hello, I'm <span>Katya Rukosuev</span>
         </p>
         <p>
-          I'm a <span>Frontend</span> web developer.
+          <span>Frontend</span> web developer
         </p>
       </div>
-      {/* <div className="enterLayer__showProjects"> */}
       <Link
         to="projects"
         smooth={true}
@@ -21,12 +19,6 @@ const EnterPage = () => {
       >
         View my work
       </Link>
-      {/* <NavigateNextIcon
-          sx={{
-            fontSize: 20,
-          }}
-        /> */}
-      {/* </div> */}
     </div>
   );
 };

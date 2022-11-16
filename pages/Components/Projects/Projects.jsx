@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Project from "./Project";
-import { useEffect, useState } from "react";
 
-const Projects = ({ projects, openProject, setOpenProject, getProjects }) => {
+const Projects = ({ projects, getProjects }) => {
   return (
     <div id="projects" className="projects">
       <h2>Projects</h2>
