@@ -34,7 +34,7 @@ const Reviews = ({ reviews }) => {
         <div className="reviews__window">
           <Slider {...settings}>
             {reviews.map((rev) => (
-              <Review review={rev} />
+              <Review review={rev} key={rev._id} />
             ))}
           </Slider>
         </div>
