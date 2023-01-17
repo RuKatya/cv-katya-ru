@@ -16,23 +16,19 @@
     margin: 2% auto;
     align-items: center;
 
-    &--infoText,
-    &--skills {
-      width: clamp(300px, 48%, 1500px);
+    &--infoText &--skills {
       margin: 0% auto;
     }
 
     &--infoText {
+      width: clamp(300px, 60%, 1500px);
       font-family: "Montserrat", sans-serif;
       font-size: clamp(20px, 1vw, 40px);
       padding: 1% 0%;
-
-      @media (max-width: 1000px) {
-        padding: 3% 0% 15% 0%;
-      }
     }
 
     &--skills {
+      width: clamp(150px, 20%, 1500px);
       font-size: clamp(22px, 1.3vw, 40px);
       list-style-type: none;
       padding: 0;
