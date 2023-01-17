@@ -36,14 +36,14 @@ const MoreMe = () => {
       {iconsAboutMe.map((img, index) => {
         return (
           <div key={index} className="about__content--eachOtherMe">
-            <div>
+            <div className="about__content--eachOtherMe--img">
               <Image src={img.src} alt="idea" width={100} height={100} />
             </div>
-            <p className="about__content--eachOtherMe__personality">
+            <div className="about__content--eachOtherMe__personality">
               {img.text.map((i, index) => {
                 return <p key={index}>{i.text}</p>;
               })}
-            </p>
+            </div>
           </div>
         );
       })}

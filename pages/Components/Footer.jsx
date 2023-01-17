@@ -10,10 +10,24 @@ const Footer = ({ windowArea }) => {
       <Link to="enterLayer" smooth={true} className="footerBar__upBtn">
         <KeyboardArrowUpIcon fontSize="large" />
       </Link>
+
+      <div className="footerBar__contactText">
+        <p>Have you any project in your mind?</p>
+        <p>Let's talk now!</p>
+        <div className="footerBar__contactInfo">
+          <h3>Contact Info</h3>
+          <a href="tel:+972526299431">+972 52-629-9431</a>
+          <a href="mailto:katya.ru.fullstack@gmail.com">
+            katya.ru.fullstack@gmail.com
+          </a>
+        </div>
+      </div>
+
       <Contacts windowArea={windowArea} />
+
       <div className="footerBar__copyright">
         <p className="footerBar__copyright--symbol">
-          <CopyrightIcon sx={{ fontSize: windowArea > 700 ? 15 : 20 }} />
+          <CopyrightIcon sx={{ fontSize: 17 }} />
         </p>
         <p className="footerBar__copyright--name">
           <a

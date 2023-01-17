@@ -4,7 +4,6 @@ import Project from "./Project";
 const Projects = ({ projects, getProjects }) => {
   return (
     <div id="projects" className="projects">
-      <h2>Projects</h2>
       <div className="projects__allProjects">
         {projects ? (
           projects.map((project) => {
@@ -19,7 +18,7 @@ const Projects = ({ projects, getProjects }) => {
         ) : (
           <div>Loading</div>
         )}
-        <Link href="https://frontend-projects.onrender.com//">
+        <Link href="https://frontend-projects.onrender.com">
           <a className="projects__mentorProjectsBtn">
             Frontend Mentor Projects
           </a>

@@ -6,8 +6,12 @@ import Projects from "./Components/Projects/Projects";
 import Books from "./Components/Books";
 import { useState, useEffect } from "react";
 import DetealsProject from "./Components/Projects/DetealsProject";
+import Reviews from "./Components/Reviews/Reviews";
+// import Reviews from "./Components/Reviews";
 
-export default function Home({ projects }) {
+export default function Home({ projects, reviews }) {
+  console.log(reviews)
+  console.log(projects)
   const [openProject, setOpenProject] = useState(false);
   const [detealsProject, setDetealsProject] = useState({});
 
@@ -29,20 +33,20 @@ export default function Home({ projects }) {
 
     change();
   }, [openProject])
+
   return (
     <div className="mainPage">
-      <EnterPage />
-      <About />
-      <Projects projects={projects} setOpenProject={setOpenProject} openProject={openProject} getProjects={getProjects} />
-      {openProject ? (
+      <EnterPage projects={projects} setOpenProject={setOpenProject} openProject={openProject} getProjects={getProjects} />
+      {openProject && (
         <div>
           <DetealsProject
             detealsProject={detealsProject}
             setOpenProject={setOpenProject}
           />
         </div>
-      ) : null}
-      <Books />
+      )}
+      <About />
+      <Reviews reviews={reviews} />
       <Form />
     </div>
   )
@@ -55,8 +59,10 @@ export async function getServerSideProps(context) {
 
   let projects = await db.collection("projects").find({}).toArray();
   projects = JSON.parse(JSON.stringify(projects));
+  let reviews = await db.collection("reviews").find({}).toArray();
+  reviews = JSON.parse(JSON.stringify(reviews));
 
   return {
-    props: { projects },
+    props: { projects, reviews },
   };
 }

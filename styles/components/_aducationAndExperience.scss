@@ -1,0 +1,14 @@
+.aducationAndExperience {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(23, 136, 98);
+    width: clamp(250px, 70%, 1800px);
+    margin: 5% auto;
+    justify-content: space-evenly;
+
+    & div {
+        background-color: bisque;
+        width: 30%;
+        padding: 1% 2%;
+    }
+}

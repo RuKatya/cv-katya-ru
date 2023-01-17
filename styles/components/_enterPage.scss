@@ -1,95 +1,191 @@
 .enterLayer {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    letter-spacing: 0.05vw;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.9) 70%
+    ),
+    url("../../public/img/leaves.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 
-    &__container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+  &__container {
+    width: clamp(250px, 70%, 1800px);
+    margin: 0% auto;
+
+    &--text {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
 
-    &__greetings {
-        width: clamp(250px, 50%, 1000px);
-        color: white;
-        user-select: none;
-        text-align: center;
-        font-size: clamp(30px, 3vw, 50px);
-
-        & p {
-            margin: 0% 0%;
-
-            span {
-                background: -webkit-linear-gradient(195deg, rgba(92, 205, 128, 1) 0%, rgb(57, 254, 241) 60%, rgba(225, 102, 252, 1) 100%);
-                background-size: 400% 400%;
-                animation: gradient 7s ease infinite;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-        }
+    & > div {
+      letter-spacing: 0.05vw;
+      font-size: clamp(30px, 1vw, 50px);
     }
-
-    &__showProjects {
-        text-align: center;
-        font-size: clamp(18px, 1.3vw, 35px);
-        display: inline-block;
-        position: relative;
-        text-decoration: none;
-        color: #14ddd3;
-
-        &.effect {
-            transition: all 0.2s linear 0s;
-
-            &::before {
-                content: ">";
-                font-family: FontAwesome;
-                font-size: clamp(16px, 1.1vw, 35px);
-                position: absolute;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                right: 0;
-                top: 0;
-                opacity: 0;
-                height: 100%;
-                width: 40px;
-                transition: all 0.2s linear 0s;
-            }
-
-            &:hover {
-                text-indent: -50px;
-
-                &:before {
-                    opacity: 1;
-                    text-indent: 80px;
-                }
-            }
-        }
-
-        @media (max-width:700px) {
-            padding: 0.5% 2%;
-        }
-    }
+  }
+}
+.webDevTitle {
+  width: 12ch;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid orange;
+  font-size: clamp(30px, 3vw, 50px);
+  animation: printed-text 2s steps(13), flashin-border 0.75s step-start infinite;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
+@keyframes flashin-border {
+  0% {
+    border-color: orange;
+  }
 
-    50% {
-        background-position: 100% 50%;
-    }
+  50% {
+    border-color: transparent;
+  }
 
-    100% {
-        background-position: 0% 50%;
-    }
+  100% {
+    border-color: orange;
+  }
 }
+
+@keyframes printed-text {
+  from {
+    width: 0%;
+  }
+}
+
+.arrow-down {
+  margin: 2% auto 5%;
+
+  @media (max-width: 750px) {
+    margin: 10% auto 7%;
+  }
+}
+
+.arrow-down span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #ffffff;
+  border-right: 5px solid #ffffff;
+  transform: rotate(45deg);
+  animation: arrow-down 4s infinite;
+
+  @media (max-width: 750px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@keyframes arrow-down {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+}
+
+// .enterLayer {
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     height: 100vh;
+//     margin: 0;
+//     letter-spacing: 0.05vw;
+
+//     &__container {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//         align-items: center;
+//         width: 100%;
+//     }
+
+//     &__greetings {
+//         width: clamp(250px, 50%, 1000px);
+//         // color: white;
+//         user-select: none;
+//         text-align: center;
+//         font-size: clamp(30px, 3vw, 50px);
+
+//         & p {
+//             margin: 0% 0%;
+
+//             span {
+//                 background: -webkit-linear-gradient(195deg, rgba(92, 205, 128, 1) 0%, rgb(57, 254, 241) 60%, rgba(225, 102, 252, 1) 100%);
+//                 background-size: 400% 400%;
+//                 animation: gradient 7s ease infinite;
+//                 background-clip: text;
+//                 -webkit-text-fill-color: transparent;
+//             }
+//         }
+//     }
+
+//     &__showProjects {
+//         text-align: center;
+//         font-size: clamp(18px, 1.3vw, 35px);
+//         display: inline-block;
+//         position: relative;
+//         text-decoration: none;
+//         color: #14ddd3;
+
+//         &.effect {
+//             transition: all 0.2s linear 0s;
+
+//             &::before {
+//                 content: ">";
+//                 font-family: FontAwesome;
+//                 font-size: clamp(16px, 1.1vw, 35px);
+//                 position: absolute;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 right: 0;
+//                 top: 0;
+//                 opacity: 0;
+//                 height: 100%;
+//                 width: 40px;
+//                 transition: all 0.2s linear 0s;
+//             }
+
+//             &:hover {
+//                 text-indent: -50px;
+
+//                 &:before {
+//                     opacity: 1;
+//                     text-indent: 80px;
+//                 }
+//             }
+//         }
+
+//         @media (max-width:700px) {
+//             padding: 0.5% 2%;
+//         }
+//     }
+// }
+
+// @keyframes gradient {
+//     0% {
+//         background-position: 0% 50%;
+//     }
+
+//     50% {
+//         background-position: 100% 50%;
+//     }
+
+//     100% {
+//         background-position: 0% 50%;
+//     }
+// }

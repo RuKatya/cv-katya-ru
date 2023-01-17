@@ -1,57 +1,86 @@
 .footerBar {
-    background-color: #0f1319;
+  background-color: #0f1319;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  align-items: center;
+
+  a {
     color: white;
+  }
+
+  &__upBtn {
+    position: absolute;
+    top: -3.5vh;
+    background-color: rgb(181, 125, 0);
+    text-align: center;
+    padding: 0.5%;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
+    justify-content: center;
     align-items: center;
 
-    &__upBtn {
-        position: absolute;
-        top: -3.5vh;
-        background-color: #2a706d;
-        text-align: center;
-        padding: 0.5%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @media (max-width: 700px) {
+      padding: 2%;
+    }
+  }
 
-        @media (max-width:700px) {
-            padding: 2%;
-        }
+  &__contactText {
+    text-align: center;
+    margin: 2% 0%;
+    font-family: "Montserrat", sans-serif;
+
+    p {
+      font-size: clamp(20px, 1.5vw, 45px);
+      margin: 5% 0%;
+      //   font-family: "Montserrat", sans-serif;
+    }
+  }
+
+  &__contactInfo {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: white;
+      font-size: clamp(22px, 1.2vw, 45px);
+      margin: 1% 0%;
+    }
+  }
+
+  &__contactLinks {
+    width: 20%;
+    padding: 3% 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: clamp(18px, 1vw, 25px);
+
+    @media (max-width: 800px) {
+      width: 100%;
+      padding: 15% 0%;
     }
 
-    &__contactLinks {
-        width: 30%;
-        padding: 3% 0%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        font-size: clamp(18px, 1vw, 25px);
-
-        @media (max-width:800px) {
-            width: 100%;
-            padding: 15% 0%;
-        }
-
-        a {
-            background-color: rgba(20, 55, 67, 0.406);
-            display: flex;
-            padding: 2%;
-            justify-content: center;
-            align-items: center;
-        }
+    a {
+      background-color: rgba(20, 55, 67, 0.406);
+      display: flex;
+      padding: 2%;
+      justify-content: center;
+      align-items: center;
+      color: white;
     }
+  }
 
-    &__copyright {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+  &__copyright {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-        &--name {
-            margin: 0% 1%;
-            width: clamp(160px, 9vw, 200px);
-        }
+    &--name {
+      color: white;
     }
+  }
 }

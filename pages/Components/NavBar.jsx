@@ -75,7 +75,7 @@ const NavBar = ({ scrollArea, windowArea }) => {
           >
             Projects
           </Link>
-          <Link
+          {/* <Link
             to="books"
             smooth={true}
             onClick={() => {
@@ -85,7 +85,7 @@ const NavBar = ({ scrollArea, windowArea }) => {
             }}
           >
             Books
-          </Link>
+          </Link> */}
           <Link
             to="contact"
             smooth={true}

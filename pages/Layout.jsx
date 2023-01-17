@@ -35,7 +35,7 @@ export default function Layout({ children }) {
   }, [hasWindow]);
   return (
     <>
-      <NavBar scrollArea={scrollArea} windowArea={windowArea} />
+      {/* <NavBar scrollArea={scrollArea} windowArea={windowArea} /> */}
       <main>{children}</main>
       <Footer windowArea={windowArea} />
     </>

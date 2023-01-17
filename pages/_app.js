@@ -3,14 +3,17 @@ import Head from 'next/head'
 import '../styles/globals.scss'
 import Layout from './Layout'
 import PreLoader from "./Loader/PreLoader";
+// import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
+  // const router = useRouter()
+  // console.log('%c_app.js line:11 router', 'color: #007acc;', router);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 5000)
+    }, 3000)
   }, [loading])
 
   return (

@@ -5,7 +5,6 @@ import Skills from "./Skills";
 const About = () => {
   return (
     <div id="about" className="about">
-      <h2>About</h2>
       <div className="about__content">
         <div className="about__content--infoText">
           <p>Hi, I'm Katya.</p>
@@ -25,13 +24,17 @@ const About = () => {
             I will help you develop your ideas on the site. I’m very passionate
             about my job and motivated to create new and adventurous websites.
             You can contact me via the{" "}
-            <Link to="contact" smooth={true} style={{ color: "#66FCF1" }}>
+            <Link
+              to="contact"
+              smooth={true}
+              style={{ color: "rgb(164,110,0)" }}
+            >
               form
             </Link>{" "}
             or send a message via{" "}
             <a
               href="https://www.linkedin.com/in/katya-rukosuev/"
-              style={{ color: "#66FCF1" }}
+              style={{ color: "rgb(164,110,0)" }}
               target="_blank"
               rel="noreferrer"
             >
@@ -40,7 +43,7 @@ const About = () => {
             or{" "}
             <a
               href="mailto:katya.ru.fullstack@gmail.com"
-              style={{ color: "#66FCF1" }}
+              style={{ color: "rgb(164,110,0)" }}
               target="_blank"
               rel="noreferrer"
             >
