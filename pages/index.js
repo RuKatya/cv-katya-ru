@@ -10,8 +10,6 @@ import Reviews from "./Components/Reviews/Reviews";
 // import Reviews from "./Components/Reviews";
 
 export default function Home({ projects, reviews }) {
-  console.log(reviews)
-  console.log(projects)
   const [openProject, setOpenProject] = useState(false);
   const [detealsProject, setDetealsProject] = useState({});
 
@@ -24,7 +22,6 @@ export default function Home({ projects, reviews }) {
   useEffect(() => {
     function change() {
       if (openProject === true) {
-        console.log(`true`)
         document.body.style = 'overflow-y:hidden'
       } else {
         document.body.style = 'overflow-y:scroll'

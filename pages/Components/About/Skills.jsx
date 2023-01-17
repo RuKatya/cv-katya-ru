@@ -39,7 +39,7 @@ const Skills = () => {
       }, 0);
     }
   });
-  // console.log(scrollArea);
+
   return (
     <ul className="about__content--skills">
       {skills.map((skill, index) => {

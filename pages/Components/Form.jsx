@@ -17,8 +17,6 @@ const Form = () => {
     let name = evt.target.elements.name.value;
     let message = evt.target.elements.message.value;
 
-    console.log(email, name, message);
-
     schema
       .validate({
         name,
@@ -37,8 +35,6 @@ const Form = () => {
 
         const data = await res.json();
         const { messageFromServer, error } = data;
-        console.log(messageFromServer);
-        console.log(error);
         setMessage(messageFromServer);
 
         if (message) {
@@ -48,8 +44,6 @@ const Form = () => {
         evt.target.reset();
       })
       .catch((err) => {
-        console.log(err.name);
-        console.log(err.errors[0]);
         setCheckValidation(err.errors[0]);
         setMessage("");
       });
