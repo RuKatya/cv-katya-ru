@@ -106,6 +106,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 
   &__window {
     background-color: #0f1319;
@@ -116,6 +117,7 @@
       top: 2%;
       left: 1%;
       cursor: pointer;
+      color: white;
     }
 
     &--usedTo {
@@ -161,9 +163,10 @@
 
       a {
         font-size: clamp(18px, 1.2vw, 25px);
-        background-color: #2a706d;
+        background-color: rgb(181, 125, 0);
         width: 15%;
         text-align: center;
+        color: black;
 
         @media (max-width: 750px) {
           width: 25%;
