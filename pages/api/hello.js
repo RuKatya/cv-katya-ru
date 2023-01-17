@@ -8,13 +8,8 @@ export default async function handler(req, res) {
   const db = client.db("mycv");
   if (req.method === 'POST') {
     try {
-      console.log(req.body)
-      // const { email, name, message } = req.body
-      const bodyObject = JSON.parse(req.body);
-      // console.log(bodyObject)
-      const { email, name, message } = bodyObject
 
-      console.log(email, name, message)
+      const { email, name, message } = bodyObject
 
       let schema = yup.object().shape({
         name: yup.string().required("Plese enter your name").min(2),
@@ -29,7 +24,6 @@ export default async function handler(req, res) {
           message,
         }).then(async function () {
           const newPost = await db.collection("contacts").insertOne(bodyObject);
-          console.log(newPost)
           res.json({ messageFromServer: "We got your message" })
         }).catch(err => {
           res.json({ message: err.errors })

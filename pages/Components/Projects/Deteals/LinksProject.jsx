@@ -1,9 +1,6 @@
 import Link from "next/link";
 
 const LinksProject = ({ links }) => {
-  console.log(links);
-
-  console.log(links.url.length);
   return (
     <div className="detealsProject__window--links">
       <Link href={links.git}>

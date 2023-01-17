@@ -6,7 +6,8 @@
   position: relative;
 
   @media (max-width: 750px) {
-    padding: 10% 0%;
+    // padding: 10% 0%;
+    // background-color: aqua;
   }
 
   &__allProjects {
@@ -111,6 +112,16 @@
   &__window {
     background-color: #0f1319;
     width: clamp(300px, 30%, 1500px);
+    line-height: 35px;
+    letter-spacing: 0.05rem;
+    // font-size: clamp(20px, 1.1vw, 45px);
+
+    @media (max-width: 900px) {
+      width: clamp(300px, 60%, 1500px);
+    }
+    @media (max-width: 750px) {
+      width: clamp(300px, 85%, 1500px);
+    }
 
     &--closeBtn {
       position: absolute;
@@ -122,10 +133,11 @@
 
     &--usedTo {
       display: flex;
+      flex-wrap: wrap;
       border-bottom: 1px grey solid;
       width: 95%;
       margin: 0% auto;
-      font-size: clamp(18px, 1.2vw, 30px);
+      font-size: clamp(20px, 1.2vw, 30px);
 
       @media (max-width: 750px) {
         width: 98%;
@@ -144,12 +156,12 @@
       font-family: "Montserrat", sans-serif;
       width: 95%;
       margin: 1.5% auto;
-      line-height: 25px;
-      font-size: clamp(18px, 1vw, 30px);
+      // line-height: 25px;
+      font-size: clamp(20px, 1vw, 30px);
 
       @media (max-width: 750px) {
         margin: 7% auto;
-        line-height: 25px;
+        // line-height: 25px;
       }
     }
 
@@ -162,7 +174,7 @@
       align-items: center;
 
       a {
-        font-size: clamp(18px, 1.2vw, 25px);
+        font-size: clamp(20px, 1.5vw, 25px);
         background-color: rgb(181, 125, 0);
         width: 15%;
         text-align: center;

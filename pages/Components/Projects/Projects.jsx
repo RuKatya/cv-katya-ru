@@ -9,8 +9,8 @@ const Projects = ({ projects, getProjects }) => {
           projects.map((project) => {
             return (
               <Project
-                project={project}
                 key={project._id}
+                project={project}
                 getProjects={getProjects}
               />
             );

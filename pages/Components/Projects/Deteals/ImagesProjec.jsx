@@ -16,9 +16,9 @@ const ImagesProjec = ({ project }) => {
     <div>
       <div>
         <Slider {...settings}>
-          {project.subImage.images.map((img) => {
+          {project.subImage.images.map((img, index) => {
             return (
-              <div key={img.index}>
+              <div key={index}>
                 <Image
                   src={`/img/${project.folder}/${project.subImage.folder}/${img}.jpg`}
                   alt={project.title}
