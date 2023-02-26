@@ -13,6 +13,7 @@
     display: flex;
     flex-flow: row wrap;
     width: clamp(250px, 60%, 3000px);
+    justify-content: space-between;
     margin: 2% auto;
     align-items: center;
 
@@ -21,10 +22,16 @@
     }
 
     &--infoText {
-      width: clamp(300px, 60%, 1500px);
+      width: clamp(300px, 70%, 1500px);
       font-family: "Montserrat", sans-serif;
       font-size: clamp(20px, 1vw, 40px);
       padding: 1% 0%;
+
+      @media (max-width: 850px) {
+        width: clamp(300px, 90%, 1500px);
+        text-align: center;
+        margin: 0% auto;
+      }
     }
 
     &--skills {
@@ -35,7 +42,7 @@
       display: grid;
       justify-items: end;
 
-      @media (max-width: 750px) {
+      @media (max-width: 850px) {
         margin: 10% auto;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
