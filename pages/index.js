@@ -13,8 +13,6 @@ export default function Home({ projects, reviews }) {
   const [openProject, setOpenProject] = useState(false);
   const [detealsProject, setDetealsProject] = useState({});
 
-
-
   function getProjects(idProject) {
     setOpenProject(true);
     const projectFind = projects.filter((i) => i._id == idProject);
